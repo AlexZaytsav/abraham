@@ -27,7 +27,7 @@
     <% if step.key?('title') %>
     title: "<%= step['title'] %>",
     <% end %>
-    text: "<%= step['text'] %>",
+    text: "<%= step['text'].html_safe %>",
     <% if step.key?('attachTo') %>
     attachTo: { element: "<%= escape_javascript(step['attachTo']['element'].html_safe) %>", on: "<%= step['attachTo']['placement'] %>" },
     showOn: function() {
